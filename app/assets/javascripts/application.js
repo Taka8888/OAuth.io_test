@@ -9,17 +9,24 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
 //= require jquery
 //= require jquery_ujs
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-OAuth.initialize('your_app_public_key');
+// OAuth.initialize('your_app_public_key');
+//
+// OAuth.popup("favebook", function(err, res) {
+//     res.get('/1.1/account/verify_credentials.json')
+//         .done(function(result) {
+//             console.log(result.screen_name);
+//         });
+// });
 
-OAuth.popup("favebook", function(err, res) {
-    res.get('/1.1/account/verify_credentials.json')
-        .done(function(result) {
-            console.log(result.screen_name);
-        });
-});
+
+OAuth.initialize('Xe4PQDvjjSERBO9PpT3S6Dcgvcw')
+OAuth.popup('facebook').done(function(result) {
+    console.log(result)
+    // do some stuff with result
+})
