@@ -23,8 +23,6 @@
 //             console.log(result.screen_name);
 //         });
 // });
-
-
 OAuth.initialize('Xe4PQDvjjSERBO9PpT3S6Dcgvcw')
 OAuth.popup('facebook').done(function(result) {
     console.log(result)
